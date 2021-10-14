@@ -1,30 +1,100 @@
 @charset "uft-8";
 
+@use "vars" as v;
+
 .container {
 	position: relative;
-	width: 1200px;
+	width: 1280px;
 	margin: 0 auto;
 	background: rgba(0, 0, 0, 0);
+
+	@media (max-width: v.$brpointWeb1) {
+		width: 100%;
+	}
 }
 
 .row {
-	padding: 0 24px;
+	padding: 0 28px;
+
+	@media (max-width: v.$brpointWeb2) {
+		padding: 0 24px;
+	}
+	@media (max-width: v.$brpointTablet2) {
+		padding: 0 16px;
+	}
+}
+// 모바일 메뉴
+#mNav {
+	position: absolute;
+	top: 10px;
+	right: 14px;
+	display: none;
+	@media (max-width: v.$brpointWeb2) {
+		display: block;
+	}
+	@media (max-width: v.$brpointTablet2) {
+		right: 6px;
+	}
+
+	.ham {
+		display: block;
+		width: 25px;
+		height: 17px;
+		padding: 15px 10px 10px 10px;
+
+		span {
+			display: block;
+			width: 25px;
+			height: 4px;
+			background: #39106a;
+			position: relative;
+
+			&:before {
+				content: "";
+				width: 25px;
+				height: 4px;
+				background: #39106a;
+				position: absolute;
+				left: 0;
+				bottom: -7px;
+			}
+			&:after {
+				content: "";
+				width: 25px;
+				height: 4px;
+				background: #39106a;
+				position: absolute;
+				left: 0;
+				top: -7px;
+			}
+		}
+	}
 }
 
+// 헤더영역
 #header {
 	width: 100%;
-	background: rgba(0, 0, 0, 0);
 	border-bottom: 1px solid #c6c6c6;
 
 	.header {
 		h1 {
 			float: left;
+			@media (max-width: v.$brpointWeb2) {
+				float: none;
+				text-align: center;
+			}
+			@media (max-width: v.$brpointTablet2) {
+				text-align: left;
+			}
 
 			em {
 				padding: 15px 8px 3px 0;
 				display: inline-block;
 				img {
 					width: 155px;
+				}
+				@media (max-width: v.$brpointWeb1) {
+					padding: 11px 8px 5px 0;
 				}
 			}
 			strong {
@@ -34,7 +104,16 @@
 				top: 22px;
 
 				img {
-					width: 157px;
+					width: 127px;
+				}
+				@media (max-width: v.$brpointWeb1) {
+					top: 19px;
+				}
+				@media (max-width: v.$brpointWeb2) {
+					left: 24px;
+				}
+				@media (max-width: v.$brpointTablet2) {
+					display: none;
 				}
 			}
 		}
@@ -56,7 +135,128 @@
 						display: block;
 						color: #444;
 					}
+					@media (max-width: v.$brpointWeb1) {
+						width: 93px;
+
+						a {
+							font-size: 15px;
+							padding: 17px 10px;
+						}
+					}
 				}
+			}
+			@media (max-width: v.$brpointWeb2) {
+				display: none;
+			}
+		}
+	}
+}
+
+// 베너영역
+#banner {
+	position: relative;
+
+	.banner_menu {
+		position: absolute;
+		left: 0;
+		top: 20px;
+		width: 100%;
+		height: 100px;
+		overflow: hidden;
+
+		li {
+			position: relative;
+			&.line {
+				&.line::after {
+					content: "";
+					display: block;
+					width: 1px;
+					height: 14px;
+					background: #fff;
+					position: absolute;
+					right: -18px;
+					top: 2px;
+				}
+			}
+		}
+		.bm_left {
+			float: left;
+
+			ul {
+				padding-top: 7px;
+				li {
+					display: inline;
+					margin-right: 30px;
+
+					&.total {
+						margin-right: 20px;
+						a {
+							font-size: 14px;
+							padding: 3px 10px;
+							display: inline-block;
+							border: 1px solid #fff;
+							transition: all 0.3s;
+
+							&:hover {
+								background: #fff;
+								border-color: #000;
+								color: #000;
+							}
+						}
+					}
+				}
+			}
+		}
+		.bm_right {
+			float: right;
+			overflow: hidden;
+
+			ul {
+				float: left;
+
+				&:first-child {
+					padding-top: 7px;
+				}
+				li {
+					display: inline;
+					text-align: center;
+					margin-right: 20px;
+
+					&.line {
+						margin-right: 30px;
+					}
+
+					&.white {
+						margin-right: 10px;
+						a {
+							width: 80px;
+							background-color: #fff;
+							color: #38116a;
+							padding: 7px 30px 9px 30px;
+							border: 1px solid #fff;
+							display: inline-block;
+						}
+					}
+					&.purple {
+						margin-right: 0;
+						a {
+							width: 80px;
+							background-color: #38116a;
+							color: #fff;
+							padding: 7px 30px 9px 30px;
+							border: 1px solid #6f2bc7;
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+		a {
+			color: #fff;
+			font-size: 16px;
+			transition: color 0.3s;
+			&:hover {
+				color: #c1c1c1;
 			}
 		}
 	}
