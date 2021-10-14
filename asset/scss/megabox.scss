@@ -163,6 +163,7 @@
 		width: 100%;
 		height: 100px;
 		overflow: hidden;
+		z-index: 10;
 
 		li {
 			position: relative;
@@ -184,6 +185,10 @@
 
 			ul {
 				padding-top: 7px;
+
+				@media (max-width: v.$brpointWeb2) {
+					display: none;
+				}
 				li {
 					display: inline;
 					margin-right: 30px;
@@ -216,6 +221,9 @@
 
 				&:first-child {
 					padding-top: 7px;
+					@media (max-width: v.$brpointWeb2) {
+						display: none;
+					}
 				}
 				li {
 					display: inline;
@@ -235,6 +243,13 @@
 							padding: 7px 30px 9px 30px;
 							border: 1px solid #fff;
 							display: inline-block;
+							@media (max-width: v.$brpointMobile1) {
+								font-size: 14px;
+								padding: 3px 5px 5px 5px;
+								color: #fff;
+								background: rgba(0, 0, 0, 0.6);
+								border: 1px solid #fff;
+							}
 						}
 					}
 					&.purple {
@@ -246,6 +261,13 @@
 							padding: 7px 30px 9px 30px;
 							border: 1px solid #6f2bc7;
 							display: inline-block;
+							@media (max-width: v.$brpointMobile1) {
+								font-size: 14px;
+								padding: 3px 5px 5px 5px;
+								color: #fff;
+								background: rgba(0, 0, 0, 0.6);
+								border: 1px solid #fff;
+							}
 						}
 					}
 				}
@@ -259,5 +281,101 @@
 				color: #c1c1c1;
 			}
 		}
+	}
+}
+
+// 슬라이드
+.slider {
+	width: 100%;
+	height: 600px;
+	.ss1 {
+		background: url(../img/swiper1.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.ss2 {
+		background: url(../img/swiper01.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.ss3 {
+		background: url(../img/swiper01.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.swiper-slide {
+		h2 {
+			font-size: 62px;
+			color: #fff;
+			margin-top: 200px;
+			line-height: 70px;
+			display: inline-block;
+			position: relative;
+
+			em {
+				display: block;
+
+				font-size: 59px;
+				font-weight: 100;
+			}
+			&:after {
+				content: "";
+				width: 100%;
+				height: 1px;
+				background: rgba(255, 255, 255, 0.3);
+				position: absolute;
+				bottom: -40px;
+				left: 0;
+			}
+			@media (max-width: v.$brpointTablet1) {
+				margin-top: 170px;
+				font-size: 37px;
+				line-height: 45px;
+
+				&:after {
+					bottom: -15px;
+				}
+
+				em {
+					font-size: 34px;
+				}
+			}
+			@media (max-width: v.$brpointMobile1) {
+				margin-top: 140px;
+				font-size: 24px;
+				line-height: 30px;
+
+				&:after {
+					bottom: -5px;
+				}
+
+				em {
+					font-size: 20px;
+				}
+			}
+		}
+		p {
+			font-size: 27px;
+			color: #fff;
+			padding-top: 55px;
+
+			@media (max-width: v.$brpointTablet1) {
+				font-size: 16px;
+				padding-top: 35px;
+			}
+			@media (max-width: v.$brpointMobile1) {
+				font-size: 14px;
+				padding-top: 25px;
+			}
+		}
+	}
+	@media (max-width: v.$brpointWeb1) {
+		.swiper-button-prev,
+		.swiper-button-next {
+			display: none;
+		}
+	}
+	@media (max-width: v.$brpointTablet1) {
+		height: 500px;
+	}
+	@media (max-width: v.$brpointMobile1) {
+		height: 400px;
 	}
 }

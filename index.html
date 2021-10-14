@@ -11,6 +11,8 @@
 
 		<!-- style -->
 		<link rel="stylesheet" href="/asset/css/reset.css" />
+		<link rel="stylesheet" href="/asset/css/swiper.css" />
+		<link rel="stylesheet" href="/asset/css/font-awesome.css" />
 		<link rel="stylesheet" href="/asset/css/megabox.min.css" />
 
 		<!-- 파비콘 -->
@@ -84,7 +86,9 @@
 					<div class="row">
 						<div class="bm_left">
 							<ul>
-								<li class="total"><a href="#">전체 메뉴</a></li>
+								<li class="total">
+									<a href="#"><i class="fa fa-bars"></i>전체 메뉴</a>
+								</li>
 								<li class="line"><a href="#">필름 소사이어티</a></li>
 								<li class="line"><a href="#">클래식 소사이어티</a></li>
 							</ul>
@@ -104,7 +108,42 @@
 				</div>
 			</div>
 			<div class="slider">
-				<img src="/asset/img/main_slider01.jpg" alt="베스와 베라" />
+				<!-- <img src="/asset/img/main_slider01.jpg" alt="베스와 베라" /> -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide ss1">
+							<div class="container">
+								<div class="row">
+									<h2>캡틴 마블 <em>Captain Marvel</em></h2>
+									<p>새로운 히어로, 어벤져스의 희망</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide ss2">
+							<div class="container">
+								<div class="row">
+									<h2>캡틴 마블 <em>Captain Marvel</em></h2>
+									<p>새로운 히어로, 어벤져스의 희망</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide ss3">
+							<div class="container">
+								<div class="row">
+									<h2>캡틴 마블 <em>Captain Marvel</em></h2>
+									<p>새로운 히어로, 어벤져스의 희망</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
+
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
 			</div>
 		</section>
 		<!-- //banner -->
@@ -112,6 +151,22 @@
 		<!-- 자바스크립트 라이브러리 -->
 		<script src="/asset/js/jquery.min_1.12.4.js"></script>
 		<script src="/asset/js/modernizr-custom.js"></script>
+		<script src="/asset/js/swiper.min.js"></script>
 		<script src="/asset/js/ie-checker.js"></script>
+		<script>
+			const swiper = new Swiper(".swiper-container", {
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					type: "bullets",
+				},
+				autoplay: {
+					delay: 5000,
+				},
+			});
+		</script>
 	</body>
 </html>
