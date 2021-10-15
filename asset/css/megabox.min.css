@@ -172,6 +172,11 @@
   overflow: hidden;
   z-index: 10;
 }
+@media (max-width: 600px) {
+  #banner .banner_menu {
+    top: 16px;
+  }
+}
 #banner .banner_menu li {
   position: relative;
 }
@@ -382,5 +387,9 @@
 @media (max-width: 600px) {
   .slider {
     height: 400px;
+  }
+  .slider .swiper-pagination .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
   }
 }/*# sourceMappingURL=megabox.min.css.map */

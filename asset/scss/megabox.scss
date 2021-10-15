@@ -165,6 +165,10 @@
 		overflow: hidden;
 		z-index: 10;
 
+		@media (max-width: v.$brpointMobile1) {
+			top: 16px;
+		}
+
 		li {
 			position: relative;
 			&.line {
@@ -377,5 +381,11 @@
 	}
 	@media (max-width: v.$brpointMobile1) {
 		height: 400px;
+		.swiper-pagination {
+			.swiper-pagination-bullet {
+				width: 13px;
+				height: 13px;
+			}
+		}
 	}
 }
