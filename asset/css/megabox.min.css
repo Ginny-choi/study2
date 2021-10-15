@@ -423,25 +423,25 @@
   color: #666;
   font-weight: 700;
 }
-.movie .movie_chart > div {
+.movie .movie_chart {
   overflow: hidden;
 }
-.movie .movie_chart > div > div {
+.movie .movie_chart .swiper-container2 > div > div {
   float: left;
   width: 292px;
   height: 592px;
   margin-right: 18px;
 }
-.movie .movie_chart > div > div:last-child {
+.movie .movie_chart .swiper-container2 > div > div:last-child {
   margin-right: 0;
 }
-.movie .movie_chart > div > div .poster {
+.movie .movie_chart .swiper-container2 > div > div .poster {
   position: relative;
 }
-.movie .movie_chart > div > div .poster img {
+.movie .movie_chart .swiper-container2 > div > div .poster img {
   display: block;
 }
-.movie .movie_chart > div > div .poster .rank {
+.movie .movie_chart .swiper-container2 > div > div .poster .rank {
   position: absolute;
   top: 17px;
   left: 0;
@@ -450,59 +450,72 @@
   line-height: 50px;
   background-color: #38116a;
   text-align: center;
+  font-size: 22px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
-.movie .movie_chart > div > div .poster .rank strong {
+.movie .movie_chart .swiper-container2 > div > div .poster .rank strong {
   color: #fff;
+  text-shadow: 2px 2px 3px black;
 }
-.movie .movie_chart > div > div .poster .mx {
+.movie .movie_chart .swiper-container2 > div > div .poster .mx {
   position: absolute;
   top: 17px;
   right: 17px;
 }
-.movie .movie_chart > div > div .poster .mx span {
+.movie .movie_chart .swiper-container2 > div > div .poster .mx span {
   width: 103px;
   height: 25px;
   display: block;
 }
-.movie .movie_chart > div > div .poster .mx span.m {
+.movie .movie_chart .swiper-container2 > div > div .poster .mx span.m {
   background-position: 0 -75px;
 }
-.movie .movie_chart > div > div .poster .mx span.b {
+.movie .movie_chart .swiper-container2 > div > div .poster .mx span.b {
   background-position: 0 -100px;
 }
-.movie .movie_chart > div > div .info {
+.movie .movie_chart .swiper-container2 > div > div .info {
   background: #fff;
   padding: 17px;
   border: 1px solid #d9d9d9;
 }
-.movie .movie_chart > div > div .info h3 {
+.movie .movie_chart .swiper-container2 > div > div .info h3 {
   color: #333;
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 20px;
 }
-.movie .movie_chart > div > div .info h3 span {
+.movie .movie_chart .swiper-container2 > div > div .info h3 span {
   width: 29px;
   height: 29px;
   display: inline-block;
   margin-top: 9px;
   vertical-align: -2px;
 }
-.movie .movie_chart > div > div .info h3 span.all {
+.movie .movie_chart .swiper-container2 > div > div .info h3 span.all {
   background-position: -87px -125px;
 }
-.movie .movie_chart > div > div .info h3 span.a12 {
+.movie .movie_chart .swiper-container2 > div > div .info h3 span.a12 {
   background-position: 0px -125px;
 }
-.movie .movie_chart > div > div .info h3 span.a15 {
+.movie .movie_chart .swiper-container2 > div > div .info h3 span.a15 {
   background-position: -29px -125px;
 }
-.movie .movie_chart > div > div .info h3 span.a19 {
+.movie .movie_chart .swiper-container2 > div > div .info h3 span.a19 {
   background-position: -58px -125px;
 }
-.movie .movie_chart > div > div .info .info_btn a {
-  display: inline-block;
+.movie .movie_chart .swiper-container2 > div > div .info .info_btn {
+  overflow: hidden;
+}
+.movie .movie_chart .swiper-container2 > div > div .info .info_btn a {
+  float: left;
+  width: 49%;
+  text-align: center;
   background: #f2f2f2;
   font-size: 18px;
-  padding: 15px 30px;
+  padding: 15px 0;
+  margin-right: 2%;
+  box-sizing: border-box;
+}
+.movie .movie_chart .swiper-container2 > div > div .info .info_btn a:last-child {
+  margin-right: 0;
 }/*# sourceMappingURL=megabox.min.css.map */
