@@ -754,17 +754,19 @@
 			});
 
 			//영화차트 이미지 슬라이드
-			// var mySwiper = new Swiper(".swiper-container2", {
-			// 	slidesPerView: 4,
-			// 	spaceBetween: 21,
-			// 	// mousewheel: {
-			// 	// 	invert: true,
-			// 	// },
-			// 	keyboard: {
-			// 		enabled: true,
-			// 		onlyInViewport: false,
-			// 	},
-			// });
+			var mySwiper = new Swiper(".swiper-container2", {
+				slidesPerView: 4,
+				spaceBetween: 21,
+				// mousewheel: {
+				// 	invert: true,
+				// },
+				keyboard: {
+					enabled: true,
+					onlyInViewport: false,
+				},
+				observer: true,
+				observeParents: true,
+			});
 		</script>
 	</body>
 </html>
