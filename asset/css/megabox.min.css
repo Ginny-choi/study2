@@ -1,3 +1,9 @@
+@media (max-width: 768px) {
+  body {
+    background-color: #d9d7e0;
+  }
+}
+
 .container {
   position: relative;
   width: 1280px;
@@ -394,16 +400,111 @@
   }
 }
 
+#movie .container {
+  position: relative;
+}
+@media (max-width: 600px) {
+  #movie .container::after {
+    content: "";
+    position: absolute;
+    z-index: 20;
+    right: 0;
+    width: 8px;
+    height: 100%;
+    background: #d9d7e0;
+  }
+}
+@media (max-width: 768px) {
+  #movie .row {
+    background: #fff;
+    margin: 24px;
+    padding: 24px;
+  }
+}
+@media (max-width: 600px) {
+  #movie .row {
+    margin: 8px;
+    padding: 15px;
+    margin-right: 0;
+    padding-right: 0;
+    position: relative;
+  }
+  #movie .row::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 100%;
+    background: #fff;
+  }
+}
+@media (max-width: 768px) {
+  #movie .ir_so {
+    position: static;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    text-indent: 0;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 600px) {
+  #movie .ir_so {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+}
+
 .movie {
   padding: 100px 0;
 }
+@media (max-width: 768px) {
+  .movie {
+    padding-top: 0;
+  }
+}
 .movie .movie_title {
   margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+  .movie .movie_title {
+    margin-bottom: 20px;
+  }
 }
 .movie .movie_title ul {
   overflow: hidden;
   width: 848px;
   margin: 0 auto;
+}
+@media (max-width: 960px) {
+  .movie .movie_title ul {
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .movie .movie_title ul {
+    position: relative;
+    padding-bottom: 10px;
+  }
+  .movie .movie_title ul::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #e1e1e1e1;
+  }
+}
+@media (max-width: 600px) {
+  .movie .movie_title ul {
+    padding-bottom: 8px;
+  }
 }
 .movie .movie_title ul li {
   float: left;
@@ -412,9 +513,44 @@
   border: 1px solid #c4c4c4;
   margin-right: -1px;
 }
+@media (max-width: 960px) {
+  .movie .movie_title ul li {
+    width: 25%;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 768px) {
+  .movie .movie_title ul li {
+    width: auto;
+    border: 0;
+    margin-right: 0;
+  }
+}
 .movie .movie_title ul li.active a {
   background: #666;
   color: #fff;
+}
+@media (max-width: 768px) {
+  .movie .movie_title ul li.active a {
+    background: transparent;
+    color: #666;
+    position: relative;
+  }
+  .movie .movie_title ul li.active a::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background: #666;
+  }
+}
+@media (max-width: 768px) and (max-width: 600px) {
+  .movie .movie_title ul li.active a::before {
+    bottom: -8px;
+  }
 }
 .movie .movie_title ul li a {
   display: block;
@@ -423,13 +559,25 @@
   color: #666;
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  .movie .movie_title ul li a {
+    font-weight: 400;
+    padding: 0;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .movie .movie_title ul li a {
+    font-size: 14px;
+    margin-right: 15px;
+  }
+}
 .movie .movie_chart {
   overflow: hidden;
 }
 .movie .movie_chart .swiper-container2 > div > div {
   float: left;
   width: 292px;
-  height: 592px;
   margin-right: 18px;
 }
 .movie .movie_chart .swiper-container2 > div > div:last-child {
@@ -478,11 +626,28 @@
   padding: 17px;
   border: 1px solid #d9d9d9;
 }
+@media (max-width: 600px) {
+  .movie .movie_chart .swiper-container2 > div > div .info {
+    padding: 5px;
+  }
+}
 .movie .movie_chart .swiper-container2 > div > div .info h3 {
   color: #333;
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .movie .movie_chart .swiper-container2 > div > div .info h3 {
+    text-align: center;
+    margin: 5px 0 10px;
+  }
+  .movie .movie_chart .swiper-container2 > div > div .info h3 strong {
+    display: block;
+    font-size: 19px;
+    color: #222;
+    font-weight: 300;
+  }
 }
 .movie .movie_chart .swiper-container2 > div > div .info h3 span {
   width: 29px;
@@ -490,6 +655,11 @@
   display: inline-block;
   margin-top: 9px;
   vertical-align: -2px;
+}
+@media (max-width: 600px) {
+  .movie .movie_chart .swiper-container2 > div > div .info h3 span {
+    display: none;
+  }
 }
 .movie .movie_chart .swiper-container2 > div > div .info h3 span.all {
   background-position: -87px -125px;
@@ -518,4 +688,20 @@
 }
 .movie .movie_chart .swiper-container2 > div > div .info .info_btn a:last-child {
   margin-right: 0;
+}
+@media (max-width: 600px) {
+  .movie .movie_chart .swiper-container2 > div > div .info .info_btn a {
+    width: 52%;
+    margin-left: 24%;
+    display: block;
+    margin-right: 0;
+    padding: 5px;
+    border: 1px solid #dbdbdb;
+    color: #777;
+    background: transparent;
+    font-size: 14px;
+  }
+  .movie .movie_chart .swiper-container2 > div > div .info .info_btn a:last-child {
+    display: none;
+  }
 }/*# sourceMappingURL=megabox.min.css.map */
