@@ -18,3 +18,16 @@
 
 -   https://webkit.org/demos/srcset/ 사용 디바이스 해상도 알려주는 사이트
 -   border가 두줄로 겹쳐 보일 때 요소에 margin-left:-1px 혹은 margin-right:-1px 을 주면 한줄로 보이게 한다.
+
+---
+
+10/18
+
+##### 스와이퍼 슬라이더 플러그인 오류 발생
+
+-   display: none -> block 으로 탭메뉴를 구성했기 때문에 변경시 렌더링트리에 만들어지지 않아서 구현이 되지 않는 오류 발생
+-   돔의 상태변경을 감지하는 api 활용으로 오류 해결 / oberserver, oberserveParents 옵션 적용
+-   🔑 https://swiperjs.com/swiper-api#param-observer 참조
+-   🔑 slick의 경우 https://deront-end.tistory.com/3 해당글 참고
+
+\*\* img 는 inline 구조 이기 때문에 폰트 사이즈도 영역이 잡힌다. -> 여백을 없애려면 블록으로 바꿔준다.

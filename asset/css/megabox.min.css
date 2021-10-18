@@ -81,6 +81,7 @@
 #header {
   width: 100%;
   border-bottom: 1px solid #c6c6c6;
+  background: #fff;
 }
 #header .header h1 {
   float: left;
@@ -400,15 +401,24 @@
   }
 }
 
-#movie .container {
-  position: relative;
+#movie {
+  background: #f8f8f8;
+}
+@media (max-width: 768px) {
+  #movie {
+    background: none;
+  }
 }
 @media (max-width: 600px) {
+  #movie .container {
+    position: relative;
+  }
   #movie .container::after {
     content: "";
     position: absolute;
     z-index: 20;
     right: 0;
+    bottom: 0;
     width: 8px;
     height: 100%;
     background: #d9d7e0;
@@ -417,7 +427,7 @@
 @media (max-width: 768px) {
   #movie .row {
     background: #fff;
-    margin: 24px;
+    margin: 24px 24px 0 24px;
     padding: 24px;
   }
 }
@@ -432,7 +442,7 @@
   #movie .row::after {
     content: "";
     position: absolute;
-    z-index: 0;
+    z-index: 10;
     top: 0;
     right: 0;
     width: 24px;
@@ -504,6 +514,8 @@
 @media (max-width: 600px) {
   .movie .movie_title ul {
     padding-bottom: 8px;
+    white-space: nowrap;
+    overflow-x: auto;
   }
 }
 .movie .movie_title ul li {
@@ -572,8 +584,19 @@
     margin-right: 15px;
   }
 }
+@media (max-width: 320px) {
+  .movie .movie_title ul li a {
+    margin-right: 9px;
+  }
+}
 .movie .movie_chart {
   overflow: hidden;
+}
+@media (max-width: 600px) {
+  .movie .movie_chart {
+    position: relative;
+    z-index: 30;
+  }
 }
 .movie .movie_chart .swiper-container2 > div > div {
   float: left;
@@ -704,4 +727,76 @@
   .movie .movie_chart .swiper-container2 > div > div .info .info_btn a:last-child {
     display: none;
   }
+}
+
+@media (max-width: 768px) {
+  #event .row {
+    padding: 24px;
+  }
+}
+@media (max-width: 600px) {
+  #event .row {
+    padding: 0 8px;
+  }
+}
+#event .event {
+  overflow: hidden;
+  padding: 100px 0;
+}
+@media (max-width: 768px) {
+  #event .event {
+    padding: 24px;
+    background: #fff;
+  }
+}
+@media (max-width: 600px) {
+  #event .event {
+    padding: 16px;
+  }
+}
+#event .event h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  #event .event h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 600px) {
+  #event .event h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+#event .event .event_left {
+  float: left;
+  width: 66%;
+  margin-right: 2%;
+  overflow: hidden;
+}
+#event .event .event_left .event_box1,
+#event .event .event_left .event_box2 {
+  float: left;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  #event .event .event_left {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+#event .event .event_right {
+  float: left;
+  width: 32%;
+}
+@media (max-width: 768px) {
+  #event .event .event_right {
+    display: none;
+  }
+}
+#event .event img {
+  display: block;
 }/*# sourceMappingURL=megabox.min.css.map */
