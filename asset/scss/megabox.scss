@@ -897,3 +897,82 @@ body {
 		}
 	}
 }
+
+//new movie
+#new {
+	.new {
+		padding: 100px 0;
+		position: relative;
+
+		> h2 {
+			font-size: 30px;
+			font-weight: 500;
+			margin-bottom: 20px;
+		}
+		.new_left {
+			margin-right: 423px;
+			height: 500px;
+			background: #ccc url(../img/new01.jpg) center center;
+			background-size: cover;
+			position: relative;
+
+			.play {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 120px;
+				height: 120px;
+				transform: translate(-50%, -50%);
+
+				.st0 {
+					fill: #fff;
+					opacity: 0.3;
+				}
+				.st1 {
+					fill: #fff;
+				}
+			}
+		}
+		.new_right {
+			position: absolute;
+			right: 0;
+			top: 165px;
+			width: 400px;
+			height: 500px;
+			background: #f0f0f0;
+			padding: 33px;
+			box-sizing: border-box;
+
+			.title {
+				font-size: 28px;
+			}
+			.release {
+				font-size: 12px;
+			}
+			.star_wrap {
+				font-size: 16px;
+				font-weight: bold;
+				padding: 16px 0;
+
+				.star1 {
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					background-position: -393px 0px;
+				}
+				.star2 {
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					background-position: -393px 0px;
+				}
+				.star3 {
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					background-position: -375px 0px;
+				}
+			}
+		}
+	}
+}
