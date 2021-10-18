@@ -31,3 +31,5 @@
 -   🔑 slick의 경우 https://deront-end.tistory.com/3 해당글 참고
 
 \*\* img 는 inline 구조 이기 때문에 폰트 사이즈도 영역이 잡힌다. -> 여백을 없애려면 블록으로 바꿔준다.
+
+-   이미지 스플라이트 -> background position 을 조정해서 맞는 이미지를 넣어줌
