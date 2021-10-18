@@ -1,0 +1,28 @@
+diff a/index.html b/index.html	(rejected hunks)
+@@ -10,17 +10,17 @@
+ 		<title>Document</title>
+ 
+ 		<!-- style -->
+-		<link rel="stylesheet" href="/asset/css/reset.css" />
+-		<link rel="stylesheet" href="/asset/css/swiper.css" />
+-		<link rel="stylesheet" href="/asset/css/font-awesome.css" />
+-		<link rel="stylesheet" href="/asset/css/megabox.min.css" />
++		<link rel="stylesheet" href="../asset/css/reset.css" />
++		<link rel="stylesheet" href="../asset/css/swiper.css" />
++		<link rel="stylesheet" href="../asset/css/font-awesome.css" />
++		<link rel="stylesheet" href="../asset/css/megabox.min.css" />
+ 
+ 		<!-- 파비콘 -->
+-		<link rel="shortcut icon" href="assets/icons/favicon.ico" />
+-		<link rel="apple-touch-icon-precomposed" href="assets/icons/favicon_72.png" />
+-		<link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icons/favicon_96.png" />
+-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/favicon_144.png" />
+-		<link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icons/favicon_192.png" />
++		<link rel="shortcut icon" href="../asset/icons/favicon.ico" />
++		<link rel="apple-touch-icon-precomposed" href="../asset/icons/favicon_72.png" />
++		<link rel="apple-touch-icon-precomposed" sizes="96x96" href="../asset/icons/favicon_96.png" />
++		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../asset/icons/favicon_144.png" />
++		<link rel="apple-touch-icon-precomposed" sizes="192x192" href="../asset/icons/favicon_192.png" />
+ 	</head>
+ 	<!-- 페이스북 메타 태그 -->
+ 	<meta property="og:title" content="메가박스 사이트 만들기" />
