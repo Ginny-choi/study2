@@ -44,3 +44,10 @@
 -   이미지 스플라이트 -> background position 을 조정해서 맞는 이미지를 넣어줌
 -   background img 위치를 center center(가운데정렬)로 해주면 짤리는 느낌 방지
 -   svg 색상 채우기 : fill
+
+---
+
+10/19
+
+-   글씨는 위치를 이동하지 않는다. 정렬을 맞추기 위해서는 다른 요소의 vertical-align 을 설정해줌
+-   background에 이미지를 넣을 때. 자리 잡는 방법 중 하나 => right 10px top 10px; 직접 숫자를 정해줌

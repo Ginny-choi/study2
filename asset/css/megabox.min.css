@@ -944,6 +944,11 @@
   background-size: cover;
   position: relative;
 }
+@media (max-width: 960px) {
+  #new .new .new_left {
+    margin-right: 0;
+  }
+}
 #new .new .new_left .play {
   position: absolute;
   top: 50%;
@@ -969,32 +974,96 @@
   padding: 33px;
   box-sizing: border-box;
 }
+@media (max-width: 960px) {
+  #new .new .new_right {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+}
 #new .new .new_right .title {
   font-size: 28px;
+  color: #000;
 }
 #new .new .new_right .release {
-  font-size: 12px;
+  font-size: 14px;
+  color: #333;
 }
 #new .new .new_right .star_wrap {
-  font-size: 16px;
-  font-weight: bold;
-  padding: 16px 0;
+  padding: 13px 0;
 }
-#new .new .new_right .star_wrap .star1 {
-  display: inline-block;
+#new .new .new_right .star_wrap strong {
+  font-size: 15px;
+  padding-left: 5px;
+}
+#new .new .new_right .star_wrap > span {
+  vertical-align: -3px;
   width: 20px;
   height: 20px;
+  display: inline-block;
+}
+#new .new .new_right .star_wrap .star1 {
   background-position: -393px 0px;
 }
 #new .new .new_right .star_wrap .star2 {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-position: -393px 0px;
+  background-position: -412px 0px;
 }
 #new .new .new_right .star_wrap .star3 {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
   background-position: -375px 0px;
+}
+#new .new .summery {
+  font-size: 14px;
+}
+#new .new .summery .genre {
+  padding-bottom: 3px;
+}
+#new .new .summery .age {
+  padding-bottom: 10px;
+}
+#new .new .summery .desc {
+  height: 108px;
+  overflow: hidden;
+}
+#new .new .select {
+  overflow: hidden;
+}
+#new .new .select .s1 {
+  float: left;
+  width: 49%;
+  margin-right: 2%;
+  background: #000;
+}
+#new .new .select .s2 {
+  float: left;
+  width: 49%;
+  background: #000;
+}
+#new .new .select .s3 {
+  float: left;
+  width: 100%;
+  margin-top: 2%;
+}
+#new .new .btn {
+  overflow: hidden;
+  margin-top: 2%;
+  text-align: center;
+}
+#new .new .btn a {
+  float: left;
+  width: 49%;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 30px 12px 30px;
+}
+#new .new .btn a.white {
+  color: #3b1a6b;
+  margin-right: 2%;
+  background: #fff;
+  border: 1px solid #3b1a6b;
+}
+#new .new .btn a.purple {
+  color: #fff;
+  background: #3b1a6b;
+  border: 1px solid #6e40c4;
 }/*# sourceMappingURL=megabox.min.css.map */
