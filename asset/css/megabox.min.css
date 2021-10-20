@@ -1143,18 +1143,44 @@
   border: 1px solid #6e40c4;
 }
 
+@media (max-width: 768px) {
+  #help .row {
+    padding: 0 24px;
+  }
+}
+@media (max-width: 600px) {
+  #help .row {
+    padding: 0 8px;
+  }
+}
+
 .help {
   overflow: hidden;
   padding-bottom: 200px;
+}
+@media (max-width: 768px) {
+  .help {
+    padding-bottom: 24px;
+  }
 }
 .help article {
   float: left;
   width: 32%;
   margin-right: 2%;
 }
+@media (max-width: 768px) {
+  .help article {
+    box-sizing: border-box;
+  }
+}
 .help article > div {
   border: 1px solid #dbdbdb;
   height: 350px;
+}
+@media (max-width: 320px) {
+  .help article > div {
+    height: 287px;
+  }
 }
 .help article.help_box3 {
   margin-right: 0;
@@ -1164,23 +1190,68 @@
   font-weight: 500;
   margin-bottom: 20px;
 }
+@media (max-width: 768px) {
+  .help article h3 {
+    font-size: 24px;
+    font-weight: 700;
+    height: 27px;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .help article h3 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .help article:last-child h3 {
+    display: none;
+  }
+}
 
-.help_box1 .notice {
+@media (max-width: 1024px) {
+  .help article.help_box1 {
+    width: 49%;
+    margin-right: 2%;
+  }
+}
+@media (max-width: 768px) {
+  .help article.help_box1 {
+    width: 100%;
+    background: #fff;
+    margin-right: 0;
+    margin-top: 24px;
+    padding: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .help article.help_box1 {
+    margin-top: 8px;
+    padding: 16px;
+  }
+}
+.help article.help_box1 .notice {
   padding: 17px;
   position: relative;
 }
-.help_box1 .notice ul {
+@media (max-width: 320px) {
+  .help article.help_box1 .notice {
+    padding: 8px;
+  }
+}
+.help article.help_box1 .notice ul {
   overflow: hidden;
 }
-.help_box1 .notice ul li {
+.help article.help_box1 .notice ul li {
   float: left;
   text-align: center;
   margin-right: -1px;
 }
-.help_box1 .notice ul li.active a {
+.help article.help_box1 .notice ul li.active a {
   background: #fff;
 }
-.help_box1 .notice ul li a {
+.help article.help_box1 .notice ul li a {
   border: 1px solid #dbdbdb;
   font-size: 15px;
   color: #666;
@@ -1189,27 +1260,43 @@
   padding: 10px 20px;
   background: #f5f5f5;
 }
-.help_box1 .notice ul li ul {
+@media (max-width: 320px) {
+  .help article.help_box1 .notice ul li a {
+    padding: 5px 10px;
+  }
+}
+.help article.help_box1 .notice ul li ul {
   position: absolute;
   top: 70px;
   left: 17px;
   width: 90%;
 }
-.help_box1 .notice ul li ul li {
+@media (max-width: 320px) {
+  .help article.help_box1 .notice ul li ul {
+    left: 9px;
+    top: 56px;
+  }
+}
+.help article.help_box1 .notice ul li ul li {
   width: 100%;
   box-sizing: border-box;
   text-align: left;
   padding: 17px;
   border-bottom: 1px solid #dbdbdb;
 }
-.help_box1 .notice ul li ul li:last-child {
+@media (max-width: 320px) {
+  .help article.help_box1 .notice ul li ul li {
+    padding: 8px;
+  }
+}
+.help article.help_box1 .notice ul li ul li:last-child {
   border-bottom: none;
 }
-.help_box1 .notice ul li ul li dl dt .bar {
+.help article.help_box1 .notice ul li ul li dl dt .bar {
   position: relative;
   padding-right: 14px;
 }
-.help_box1 .notice ul li ul li dl dt .bar::after {
+.help article.help_box1 .notice ul li ul li dl dt .bar::after {
   content: "";
   position: absolute;
   right: 4px;
@@ -1218,10 +1305,10 @@
   height: 10px;
   background: #999;
 }
-.help_box1 .notice ul li ul li dl dt em {
+.help article.help_box1 .notice ul li ul li dl dt em {
   color: #999;
 }
-.help_box1 .notice ul li ul li dl dd {
+.help article.help_box1 .notice ul li ul li dl dd {
   color: #333;
   padding-top: 3px;
   overflow: hidden;
@@ -1229,10 +1316,36 @@
   white-space: nowrap;
 }
 
-.help_box2 .card {
-  padding: 15px;
+@media (max-width: 1024px) {
+  .help article.help_box2 {
+    width: 49%;
+    margin-right: 0;
+  }
 }
-.help_box2 .card ul li {
+@media (max-width: 768px) {
+  .help article.help_box2 {
+    width: 100%;
+    background: #fff;
+    margin-right: 0;
+    margin-top: 24px;
+    padding: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .help article.help_box2 {
+    margin-top: 8px;
+    padding: 16px;
+  }
+}
+.help article.help_box2 .card {
+  padding: 17px;
+}
+@media (max-width: 600px) {
+  .help article.help_box2 .card {
+    padding: 8px;
+  }
+}
+.help article.help_box2 .card ul li {
   border: 1px solid #d7d7d7;
   padding: 17px;
   margin-bottom: 15px;
@@ -1240,24 +1353,183 @@
   min-height: 102px;
   box-sizing: border-box;
 }
-.help_box2 .card ul li span {
+@media (max-width: 320px) {
+  .help article.help_box2 .card ul li {
+    padding: 8px;
+    margin-bottom: 8px;
+    min-height: 90px;
+  }
+}
+.help article.help_box2 .card ul li span {
   position: absolute;
   left: 17px;
   top: 17px;
 }
-.help_box2 .card ul li span img {
+@media (max-width: 320px) {
+  .help article.help_box2 .card ul li span {
+    left: 11px;
+    top: 10px;
+  }
+}
+.help article.help_box2 .card ul li span img {
   width: 105px;
 }
-.help_box2 .card ul li strong {
+@media (max-width: 320px) {
+  .help article.help_box2 .card ul li span img {
+    width: 60px;
+  }
+}
+.help article.help_box2 .card ul li strong {
   padding-left: 120px;
   font-size: 18px;
   display: block;
   color: #777;
 }
-.help_box2 .card ul li em {
+@media (max-width: 320px) {
+  .help article.help_box2 .card ul li strong {
+    padding-left: 75px;
+    font-size: 14px;
+  }
+}
+.help article.help_box2 .card ul li em {
   padding-left: 120px;
   font-size: 14px;
   display: block;
   color: #777;
   font-weight: 300;
+}
+@media (max-width: 320px) {
+  .help article.help_box2 .card ul li em {
+    padding-left: 75px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .help article.help_box3 {
+    width: 100%;
+    margin-top: 2%;
+  }
+}
+@media (max-width: 768px) {
+  .help article.help_box3 {
+    width: 100%;
+    background: #fff;
+    margin-top: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .help article.help_box3 {
+    margin-top: 8px;
+  }
+}
+.help article.help_box3 .service {
+  border: 0;
+}
+@media (max-width: 768px) {
+  .help article.help_box3 .service {
+    height: auto;
+  }
+}
+.help article.help_box3 .service ul {
+  overflow: hidden;
+}
+.help article.help_box3 .service ul li {
+  float: left;
+  width: 50%;
+  height: 193px;
+  box-sizing: border-box;
+  border: 1px solid #d7d7d7;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .help article.help_box3 .service ul li {
+    width: 25%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .help article.help_box3 .service ul li {
+    border: 0;
+  }
+}
+@media (max-width: 600px) {
+  .help article.help_box3 .service ul li {
+    width: 50%;
+  }
+}
+.help article.help_box3 .service ul li:nth-child(1) {
+  border-right: 0;
+  border-bottom: 0;
+}
+@media (max-width: 1024px) {
+  .help article.help_box3 .service ul li:nth-child(1) {
+    border-bottom: 1px solid #d7d7d7;
+  }
+}
+@media (max-width: 768px) {
+  .help article.help_box3 .service ul li:nth-child(1) {
+    border-bottom: 0;
+  }
+}
+@media (max-width: 600px) {
+  .help article.help_box3 .service ul li:nth-child(1) {
+    border-right: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+  }
+}
+.help article.help_box3 .service ul li:nth-child(2) {
+  border-bottom: 0;
+}
+@media (max-width: 1024px) {
+  .help article.help_box3 .service ul li:nth-child(2) {
+    border-bottom: 1px solid #d7d7d7;
+    border-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .help article.help_box3 .service ul li:nth-child(2) {
+    border-bottom: 0;
+  }
+}
+@media (max-width: 600px) {
+  .help article.help_box3 .service ul li:nth-child(2) {
+    border-bottom: 1px solid #d7d7d7;
+  }
+}
+.help article.help_box3 .service ul li:nth-child(3) {
+  border-right: 0;
+}
+@media (max-width: 600px) {
+  .help article.help_box3 .service ul li:nth-child(3) {
+    border-right: 1px solid #d7d7d7;
+  }
+}
+.help article.help_box3 .service ul li a span {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 20px auto 0 auto;
+  overflow: hidden;
+}
+@media (max-width: 320px) {
+  .help article.help_box3 .service ul li a span {
+    width: 70px;
+    height: 70px;
+  }
+}
+.help article.help_box3 .service ul li a strong {
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .help article.help_box3 .service ul li a strong {
+    display: block;
+    padding-bottom: 10%;
+  }
+}
+@media (max-width: 320px) {
+  .help article.help_box3 .service ul li a strong {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=megabox.min.css.map */
