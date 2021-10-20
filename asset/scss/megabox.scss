@@ -1123,6 +1123,7 @@ body {
 	@media (max-width: v.$brpointTablet2) {
 		padding-bottom: 24px;
 	}
+
 	article {
 		float: left;
 		width: 32%;
@@ -1457,6 +1458,112 @@ body {
 					}
 				}
 			}
+		}
+	}
+}
+
+#footer {
+	background: #222222;
+}
+.footer_sns {
+	position: absolute;
+	right: 17px;
+	top: 33px;
+	z-index: 1;
+
+	@media (max-width: v.$brpointTablet1) {
+		position: static;
+		text-align: center;
+		background: #352c2c;
+		padding-bottom: 15px;
+	}
+	li {
+		display: inline-block;
+		margin: 0 2px;
+
+		&.s1 {
+			background-position: 0 -375px;
+		}
+		&.s2 {
+			background-position: -36px -375px;
+		}
+		&.s3 {
+			background-position: -72px -375px;
+		}
+		&.s4 {
+			background-position: -108px -375px;
+		}
+		&.s5 {
+			background-position: -144px -375px;
+		}
+
+		a {
+			display: block;
+			width: 36px;
+			height: 36px;
+		}
+	}
+	.tel {
+		font-size: 21px;
+		text-align: right;
+		padding-top: 10px;
+
+		@media (max-width: v.$brpointTablet1) {
+			display: none;
+		}
+		a {
+			color: #999999;
+			em {
+				color: #fff;
+			}
+		}
+	}
+}
+.footer_info {
+	padding: 50px 0;
+	width: 80%;
+	@media (max-width: v.$brpointTablet1) {
+		width: 100%;
+		text-align: center;
+	}
+	h2 {
+		img {
+			width: 150px;
+		}
+	}
+	ul {
+		padding: 15px 0;
+		li {
+			display: inline-block;
+			padding-right: 16px;
+			white-space: nowrap;
+			position: relative;
+
+			&:last-child::after {
+				width: 0;
+				height: 0;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				width: 1px;
+				height: 11px;
+				background: #999999;
+			}
+
+			a {
+				color: #999999;
+				display: block;
+			}
+		}
+	}
+
+	address {
+		p {
+			color: #999999;
+			padding-bottom: 15px;
 		}
 	}
 }
