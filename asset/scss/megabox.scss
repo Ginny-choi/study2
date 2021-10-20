@@ -900,14 +900,44 @@ body {
 
 //new movie
 #new {
+	.row {
+		@media (max-width: v.$brpointTablet2) {
+			padding: 0 24px;
+		}
+		@media (max-width: v.$brpointMobile1) {
+			padding: 0 8px;
+		}
+	}
 	.new {
 		padding: 100px 0;
 		position: relative;
+
+		@media (max-width: v.$brpointTablet2) {
+			background: #fff;
+			padding: 24px;
+			margin-top: 24px;
+		}
+		@media (max-width: v.$brpointMobile1) {
+			padding: 16px;
+			margin-top: 8px;
+		}
 
 		> h2 {
 			font-size: 30px;
 			font-weight: 500;
 			margin-bottom: 20px;
+
+			@media (max-width: v.$brpointTablet2) {
+				font-size: 24px;
+				font-weight: 700;
+				height: 27px;
+				margin-bottom: 20px;
+				padding-bottom: 10px;
+			}
+			@media (max-width: v.$brpointMobile1) {
+				font-size: 18px;
+				margin-bottom: 0;
+			}
 		}
 		.new_left {
 			margin-right: 423px;
@@ -918,6 +948,9 @@ body {
 
 			@media (max-width: v.$brpointTablet1) {
 				margin-right: 0;
+			}
+			@media (max-width: v.$brpointMobile1) {
+				height: 300px;
 			}
 
 			.play {
@@ -954,9 +987,20 @@ body {
 				height: auto;
 			}
 
+			@media (max-width: v.$brpointTablet2) {
+				padding: 24px;
+			}
+			@media (max-width: v.$brpointMobile1) {
+				padding: 17px;
+			}
+
 			.title {
 				font-size: 28px;
 				color: #000;
+
+				@media (max-width: v.$brpointMobile1) {
+					font-size: 22px;
+				}
 			}
 			.release {
 				font-size: 14px;
@@ -964,6 +1008,10 @@ body {
 			}
 			.star_wrap {
 				padding: 13px 0;
+
+				@media (max-width: v.$brpointMobile1) {
+					padding: 9px 0;
+				}
 
 				strong {
 					font-size: 15px;
@@ -1008,11 +1056,20 @@ body {
 				width: 49%;
 				margin-right: 2%;
 				background: #000;
+
+				@media (max-width: v.$brpointMobile1) {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 7px;
+				}
 			}
 			.s2 {
 				float: left;
 				width: 49%;
 				background: #000;
+				@media (max-width: v.$brpointMobile1) {
+					width: 100%;
+				}
 			}
 			.s3 {
 				float: left;

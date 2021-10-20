@@ -928,14 +928,52 @@
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  #new .row {
+    padding: 0 24px;
+  }
+}
+@media (max-width: 600px) {
+  #new .row {
+    padding: 0 8px;
+  }
+}
 #new .new {
   padding: 100px 0;
   position: relative;
+}
+@media (max-width: 768px) {
+  #new .new {
+    background: #fff;
+    padding: 24px;
+    margin-top: 24px;
+  }
+}
+@media (max-width: 600px) {
+  #new .new {
+    padding: 16px;
+    margin-top: 8px;
+  }
 }
 #new .new > h2 {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  #new .new > h2 {
+    font-size: 24px;
+    font-weight: 700;
+    height: 27px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 600px) {
+  #new .new > h2 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
 }
 #new .new .new_left {
   margin-right: 423px;
@@ -947,6 +985,11 @@
 @media (max-width: 960px) {
   #new .new .new_left {
     margin-right: 0;
+  }
+}
+@media (max-width: 600px) {
+  #new .new .new_left {
+    height: 300px;
   }
 }
 #new .new .new_left .play {
@@ -982,9 +1025,24 @@
     height: auto;
   }
 }
+@media (max-width: 768px) {
+  #new .new .new_right {
+    padding: 24px;
+  }
+}
+@media (max-width: 600px) {
+  #new .new .new_right {
+    padding: 17px;
+  }
+}
 #new .new .new_right .title {
   font-size: 28px;
   color: #000;
+}
+@media (max-width: 600px) {
+  #new .new .new_right .title {
+    font-size: 22px;
+  }
 }
 #new .new .new_right .release {
   font-size: 14px;
@@ -992,6 +1050,11 @@
 }
 #new .new .new_right .star_wrap {
   padding: 13px 0;
+}
+@media (max-width: 600px) {
+  #new .new .new_right .star_wrap {
+    padding: 9px 0;
+  }
 }
 #new .new .new_right .star_wrap strong {
   font-size: 15px;
@@ -1034,10 +1097,22 @@
   margin-right: 2%;
   background: #000;
 }
+@media (max-width: 600px) {
+  #new .new .select .s1 {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 7px;
+  }
+}
 #new .new .select .s2 {
   float: left;
   width: 49%;
   background: #000;
+}
+@media (max-width: 600px) {
+  #new .new .select .s2 {
+    width: 100%;
+  }
 }
 #new .new .select .s3 {
   float: left;
