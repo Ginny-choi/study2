@@ -199,17 +199,16 @@ body {
 
 		li {
 			position: relative;
-			&.line {
-				&.line::after {
-					content: "";
-					display: block;
-					width: 1px;
-					height: 14px;
-					background: #fff;
-					position: absolute;
-					right: -18px;
-					top: 2px;
-				}
+
+			&.line::after {
+				content: "";
+				display: block;
+				width: 1px;
+				height: 14px;
+				background: #fff;
+				position: absolute;
+				right: -18px;
+				top: 2px;
 			}
 		}
 		.bm_left {
@@ -320,18 +319,28 @@ body {
 .slider {
 	width: 100%;
 	height: 600px;
-	.ss1 {
-		background: url(../img/swiper1.jpg) no-repeat center center;
-		background-size: cover;
+	// .ss1 {
+	// 	background: url(../img/swiper1.jpg) no-repeat center center;
+	// 	background-size: cover;
+	// }
+	// .ss2 {
+	// 	background: url(../img/swiper01.jpg) no-repeat center center;
+	// 	background-size: cover;
+	// }
+	// .ss3 {
+	// 	background: url(../img/swiper01.jpg) no-repeat center center;
+	// 	background-size: cover;
+	// }
+
+	// $i : 인덱스 [ #{$i} ]
+	// from 시작넘버 through 마지막넘버
+	@for $i from 1 through 3 {
+		.ss#{$i} {
+			background: url(../img/swiper0#{$i}.jpg) no-repeat center center;
+			background-size: cover;
+		}
 	}
-	.ss2 {
-		background: url(../img/swiper01.jpg) no-repeat center center;
-		background-size: cover;
-	}
-	.ss3 {
-		background: url(../img/swiper01.jpg) no-repeat center center;
-		background-size: cover;
-	}
+
 	.swiper-slide {
 		h2 {
 			font-size: 62px;
@@ -637,11 +646,18 @@ body {
 								height: 25px;
 								display: block;
 
-								&.m {
-									background-position: 0 -75px;
-								}
-								&.b {
-									background-position: 0 -100px;
+								// &.m {
+								// 	background-position: 0 -75px;
+								// }
+								// &.b {
+								// 	background-position: 0 -100px;
+								// }
+								$bgPositions: -75px, -100px;
+								@each $bgPosition in $bgPositions {
+									$index: index($bgPositions, $bgPosition);
+									&:nth-child(#{$index}) {
+										background-position: 0 $bgPosition;
+									}
 								}
 							}
 						}
@@ -1045,14 +1061,22 @@ body {
 					display: inline-block;
 				}
 
-				.star1 {
-					background-position: -393px 0px;
-				}
-				.star2 {
-					background-position: -412px 0px;
-				}
-				.star3 {
-					background-position: -375px 0px;
+				// .star1 {
+				// 	background-position: -393px 0px;
+				// }
+				// .star2 {
+				// 	background-position: -412px 0px;
+				// }
+				// .star3 {
+				// 	background-position: -375px 0px;
+				// }
+
+				$starPositions: -393px, -412px, -375px;
+				@each $starPosition in $starPositions {
+					$i: index($starPositions, $starPosition);
+					.star#{$i} {
+						background-position: $starPosition 0px;
+					}
 				}
 			}
 		}
@@ -1508,20 +1532,30 @@ body {
 		display: inline-block;
 		margin: 0 2px;
 
-		&.s1 {
-			background-position: 0 -375px;
-		}
-		&.s2 {
-			background-position: -36px -375px;
-		}
-		&.s3 {
-			background-position: -72px -375px;
-		}
-		&.s4 {
-			background-position: -108px -375px;
-		}
-		&.s5 {
-			background-position: -144px -375px;
+		// &.s1 {
+		// 	background-position: 0 -375px;
+		// }
+		// &.s2 {
+		// 	background-position: -36px -375px;
+		// }
+		// &.s3 {
+		// 	background-position: -72px -375px;
+		// }
+		// &.s4 {
+		// 	background-position: -108px -375px;
+		// }
+		// &.s5 {
+		// 	background-position: -144px -375px;
+		// }
+
+		// @each : 배열화된 변수를 순차적으로 활용
+		// index($bgPositions, $bgPosition) : $bgPositions에서 $bgPosition값의 index를 반환합니다.
+		$bgPositions: 0, -36px, -72px, -108px, -144px;
+		@each $bgPosition in $bgPositions {
+			$index: index($bgPositions, $bgPosition);
+			&.s#{$index} {
+				background-position: $bgPosition -375px;
+			}
 		}
 
 		a {

@@ -79,3 +79,16 @@
 -   https://developers.google.com/youtube/player_parameters 참조
 -   동영상이 들어갈 공간은 div 태그로 만들고 id를 설정해준다.
 -   매개변수를 설정해서 플레이어 옵션을 지정할 수 있다.
+
+##### 셀럭터 캐시
+
+    	var $selector = {
+    		body: $("body"),
+    		overlay: $("#blackout"),
+    		modal: $("#trailerModal"),
+    		showButton: $("#showTrailer"),
+    		hideButton: $("#hideTrailer"),
+    	};
+
+
+-   캡슐화 .. 변수안에 객체로 지정해둠으로써 글로벌로 저장된 메모리를 불러온다. 더 빨리 찾아짐 ! (여기까지 이해)
