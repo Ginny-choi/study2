@@ -30,6 +30,24 @@
   }
 }
 
+#skip {
+  position: relative;
+}
+#skip a {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 140px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  background: #333;
+  line-height: 30px;
+}
+#skip a:active, #skip a:focus {
+  top: 0;
+}
+
 #mNav {
   position: absolute;
   top: 10px;
@@ -1156,7 +1174,7 @@
 
 .help {
   overflow: hidden;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 @media (max-width: 768px) {
   .help {
@@ -1311,6 +1329,11 @@
 .help article.help_box1 .notice ul li ul li dl dd {
   color: #333;
   padding-top: 3px;
+}
+.help article.help_box1 .notice ul li ul li dl dd a {
+  border: 0;
+  padding: 0;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1425,7 +1448,7 @@
 .help article.help_box3 .service {
   border: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .help article.help_box3 .service {
     height: auto;
   }

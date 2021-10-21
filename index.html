@@ -48,6 +48,13 @@
 		</script>
 	<![endif]-->
 	<body>
+		<!--skip menu-->
+		<div id="skip">
+			<a rel="bookmark" href="#movie">최신 영화 소식</a>
+			<a rel="bookmark" href="#event">새로운 이벤트</a>
+			<a rel="bookmark" href="#new">새로운 영화</a>
+		</div>
+		<!-- //skip menu -->
 		<header id="header">
 			<div class="container">
 				<div class="row">
@@ -847,54 +854,54 @@
 											<li>
 												<dl>
 													<dt><strong class="bar">전체</strong> <em>2019.01.25</em></dt>
-													<dd>&lt;드래곤 길들이기&gt; 회원 시사회 안내 및 당첨자 발표할 예정입니다. 회..</dd>
+													<dd><a href="#">&lt;드래곤 길들이기&gt; 회원 시사회 안내 및 당첨자 발표할 예정입니다. 회..</a></dd>
 												</dl>
 											</li>
 											<li>
 												<dl>
 													<dt><strong class="bar">전체</strong> <em>2019.01.25</em></dt>
-													<dd>[무대인사] (뺑반) 1주차~ (뺑반) 1주차~ (뺑반) 1주차~ (뺑</dd>
+													<dd><a href="#">[무대인사] (뺑반) 1주차~ (뺑반) 1주차~ (뺑반) 1주차~ (뺑</a></dd>
 												</dl>
 											</li>
 											<li>
 												<dl>
 													<dt><strong class="bar">전체</strong> <em>2019.01.25</em></dt>
-													<dd>[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월</dd>
+													<dd><a href="#">[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월</a></dd>
 												</dl>
 											</li>
 											<li>
 												<dl>
 													<dt><strong class="bar">전체</strong> <em>2019.01.25</em></dt>
-													<dd>&lt;드래곤 길들이기&gt; 회원 시사회 안내 및 당첨자 발표할 예정입니다. 회..</dd>
+													<dd><a href="#">&lt;드래곤 길들이기&gt; 회원 시사회 안내 및 당첨자 발표할 예정입니다. 회..</a></dd>
 												</dl>
 											</li>
 										</ul>
 									</li>
 									<li>
 										<a href="#">영화관 공지</a>
-										<ul style="display: none">
+										<ul>
 											<li>
 												<dl>
 													<dt><strong class="bar">수원</strong> <em>2019.01.15</em></dt>
-													<dd>[무대인사] (뺑반) 1주차~ (뺑반) 1주차~ (뺑반) 1주차~ (뺑</dd>
+													<dd><a href="#">[무대인사] (뺑반) 1주차~ (뺑반) 1주차~ (뺑반) 1주차~ (뺑</a></dd>
 												</dl>
 											</li>
 											<li>
 												<dl>
 													<dt><strong class="bar">서울</strong> <em>2019.01.25</em></dt>
-													<dd>[영화인사] (뺑반) 1주차~ (뺑반) 1주차~ (뺑반) 1주차~ (뺑</dd>
+													<dd><a href="#">[영화인사] (뺑반) 1주차~ (뺑반) 1주차~ (뺑반) 1주차~ (뺑</a></dd>
 												</dl>
 											</li>
 											<li>
 												<dl>
 													<dt><strong class="bar">부산</strong> <em>2019.01.25</em></dt>
-													<dd>&lt;드래곤 길들이기&gt; 회원 시사회 안내 및 당첨자 발표할 예정입니다. 회..</dd>
+													<dd><a href="#">&lt;드래곤 길들이기&gt; 회원 시사회 안내 및 당첨자 발표할 예정입니다. 회..</a></dd>
 												</dl>
 											</li>
 											<li>
 												<dl>
 													<dt><strong class="bar">제주</strong> <em>2019.01.25</em></dt>
-													<dd>&lt;드래곤 길들이기&gt; 회원 시사회 안내 및 당첨자 발표할 예정입니다. 회..</dd>
+													<dd><a href="#">&lt;드래곤 길들이기&gt; 회원 시사회 안내 및 당첨자 발표할 예정입니다. 회..</a></dd>
 												</dl>
 											</li>
 										</ul>
@@ -1577,6 +1584,24 @@
 					},
 				},
 			});
+
+			//공지사항 탭 메뉴
+			var tabMenu = $(".notice");
+
+			//컨텐츠 내용을 숨겨주세요 !
+			tabMenu.find("ul > li > ul ").hide();
+			tabMenu.find("li.active > ul ").show();
+
+			function tabList(e) {
+				e.preventDefault(); //#의 기능 차단
+				var target = $(this);
+				target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();
+				//버튼을 클릭하면 ~ul를 보여주고
+				//부모의 li 태그에 클래스를 추가하고
+				//형제의 li태그에 클래스를 제거하고
+				//제거한 자식의 ul 태그를 숨겨줌
+			}
+			tabMenu.find("ul > li > a").click(tabList).focus(tabList);
 		</script>
 	</body>
 </html>
