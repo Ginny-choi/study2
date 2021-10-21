@@ -65,9 +65,17 @@
 
 10/21
 
-###### a 태그에 rel(relation) 속성
+###### a 태그에 rel(relation) 속성 `<a rel="속성값">`
 
     - rel 속성은 연관 관계를 명시한다. 현재 문서와 링크된 문서 사이의 연관관계를 명시
     - href 속성이 설정되어야 사용 가능
+    - http://tcpschool.com/html-tag-attrs/a-rel 속성값 참고
 
--   skip menu : position:absolute; 설정 후 탑값을 조절하여 보이게 한다. active, focus시 탑값 0으로 맞추기
+-   skip menu : position:absolute; 설정 후 탑값을 조절하여 보이게 한다. active, focus시 탑값 0으로맞추기
+-   class는 디자인용 / id는 스크립트용
+
+##### iframe Player API 를 이용하여 youtube 동영상 넣기
+
+-   https://developers.google.com/youtube/player_parameters 참조
+-   동영상이 들어갈 공간은 div 태그로 만들고 id를 설정해준다.
+-   매개변수를 설정해서 플레이어 옵션을 지정할 수 있다.
